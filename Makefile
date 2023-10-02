@@ -1,8 +1,8 @@
-all: main.cpp
-	g++ -std=c++11 -o gymnast main.cpp
+all: gymnast
 
-experimental: main.cpp
-	g++ -std=c++17 -o gymnast main.cpp -DEXPERIMENTAL
+gymnast: gymnast.cpp
+	g++ -std=c++11 -o gymnast gymnast.cpp
 
+.PHONY: clean
 clean:
 	rm -f gymnast
